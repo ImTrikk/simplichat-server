@@ -10,8 +10,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
 	cors: {
-		origin:
-			"https://railway.app/project/0921ef21-dcee-4779-a93d-00bb724c6eeb/service/236ec57f-9a5e-4d23-a9b7-295ac08c5486",
+		origin: "*",
 		methods: ["GET", "POST", "PUT", "DELETE"],
 		credentials: true,
 	},
