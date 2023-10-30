@@ -16,6 +16,10 @@ const io = new Server(server, {
 	},
 });
 
+server.get("/", async (req, res) => {
+	return res.json({ message: "success" });
+});
+ 
 // stores all existing rooms
 const existingRooms = new Map();
 const usersInRoom = new Map();
