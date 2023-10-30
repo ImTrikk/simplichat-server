@@ -19,7 +19,7 @@ const io = new Server(server, {
 server.get("/", async (req, res) => {
 	return res.json({ message: "success" });
 });
- 
+
 // stores all existing rooms
 const existingRooms = new Map();
 const usersInRoom = new Map();
@@ -172,6 +172,6 @@ io.on("connection", (socket) => {
 	socket.on("disconnect", () => {});
 });
 
-server.listen(3001, () => {
+server.listen(3001, "0.0.0.0", () => {
 	console.log("Server running on port 3001");
 });
